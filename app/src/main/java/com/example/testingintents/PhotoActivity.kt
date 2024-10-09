@@ -23,6 +23,10 @@ class PhotoActivity : AppCompatActivity() {
 
         }
 
+
+        /**
+         * taking the extras that came , for the image link
+         * **/
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             val uri =  intent.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
             Toast.makeText(this, "the uri is = $uri", Toast.LENGTH_SHORT).show();
@@ -33,6 +37,11 @@ class PhotoActivity : AppCompatActivity() {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
+
+
+        /**
+         * if the activity is single top
+         * **/
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             val uri =  intent.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
             Toast.makeText(this, "the uri is = $uri", Toast.LENGTH_SHORT).show();

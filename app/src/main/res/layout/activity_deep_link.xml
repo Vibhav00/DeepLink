@@ -34,7 +34,7 @@
                 android:id="@+id/titlePath"/>
             <TextView
                 android:layout_marginLeft="20dp"
-                android:text="lsjf"
+                android:text="this is path "
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:id="@+id/titleQ"/>
             <TextView
                 android:layout_marginLeft="20dp"
-                android:text="lsjf"
+                android:text="this si query "
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

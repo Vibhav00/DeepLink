@@ -14,15 +14,13 @@ class MainActivity : AppCompatActivity() {
     private  val airPlaneReceiver = AirPlaneReceiver() // dynamic brodcast receiver
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+//        dynamic brodcast receiver
         registerReceiver(airPlaneReceiver, IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED))
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-
-        // what is bundle
-        // adb
-        // launch mode -> single top
 
         /**
          * Explicit intent for opening app inside my app
@@ -41,6 +39,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        /**
+         *  implicit intent to open some app  to send email
+         * **/
 
         binding.implicit.setOnClickListener {
             Intent(Intent.ACTION_SEND).also {
